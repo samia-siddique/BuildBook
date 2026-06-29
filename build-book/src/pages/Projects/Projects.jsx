@@ -20,7 +20,7 @@ const Projects = () => {
   const fetchProjects = async () => {
     try {
       const data = await getProjects();
-      setProjects(data);
+      setProjects(Array.isArray(data) ? data : data?.data || []);
     } catch (error) {
       console.log(error);
     }
@@ -88,7 +88,7 @@ const Projects = () => {
       </form>
 
       <div className="project-list">
-        {projects.map((project) => (
+        {(Array.isArray(projects) ? projects : []).map((project) => (
           <ProjectCard
             key={project._id}
             id={project._id}

@@ -22,7 +22,7 @@ const Sessions = () => {
   const fetchSessions = async () => {
     try {
       const data = await getSessions();
-      setSessions(data);
+      setSessions(Array.isArray(data) ? data : data?.data || []);
     } catch (error) {
       console.log(error);
     }
@@ -89,7 +89,7 @@ const Sessions = () => {
       </form>
 
       <div className="session-list">
-        {sessions.map((session) => (
+        {(Array.isArray(sessions) ? sessions : []).map((session) => (
           <SessionCard
             key={session._id}
             id={session._id}

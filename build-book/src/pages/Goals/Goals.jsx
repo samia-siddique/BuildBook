@@ -15,7 +15,7 @@ const Goals = () => {
   const fetchGoals = async () => {
     try {
       const data = await getGoals();
-      setGoals(data);
+      setGoals(Array.isArray(data) ? data : data?.data || []);
     } catch (error) {
       console.log(error);
     }
@@ -78,7 +78,7 @@ const Goals = () => {
       </form>
 
       <div className="goal-list">
-        {goals.map((goal, index) => (
+        {(Array.isArray(goals) ? goals : []).map((goal, index) => (
           <GoalCard
             key={goal._id}
             goal={goal}
