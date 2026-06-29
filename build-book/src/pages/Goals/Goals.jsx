@@ -12,14 +12,16 @@ const Goals = () => {
     fetchGoals();
   }, []);
 
+
   const fetchGoals = async () => {
-    try {
-      const data = await getGoals();
-      setGoals(Array.isArray(data) ? data : data?.data || []);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const data = await getGoals();
+    setGoals(Array.isArray(data) ? data : []);
+  } catch (error) {
+    console.log(error);
+    setGoals([]);
+  }
+};
 
   const handleAdd = async (e) => {
     e.preventDefault();

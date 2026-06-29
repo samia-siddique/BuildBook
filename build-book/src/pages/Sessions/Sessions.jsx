@@ -19,14 +19,15 @@ const Sessions = () => {
     fetchSessions();
   }, []);
 
-  const fetchSessions = async () => {
-    try {
-      const data = await getSessions();
-      setSessions(Array.isArray(data) ? data : data?.data || []);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const fetchSessions = async () => {
+  try {
+    const data = await getSessions();
+    setSessions(Array.isArray(data) ? data : []);
+  } catch (error) {
+    console.log(error);
+    setSessions([]);
+  }
+};
 
   const handleSession = async (event) => {
     event.preventDefault();

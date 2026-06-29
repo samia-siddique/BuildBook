@@ -38,7 +38,7 @@ router.delete("/:id", async (req, res) => {
 
     res.json({ message: "Goal removed" });
   } catch (error) {
-    console.log(error); // <-- Make sure this is here
+    console.log(error); 
     res.status(500).json({ message: error.message });
   }
 });

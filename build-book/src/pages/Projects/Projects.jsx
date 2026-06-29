@@ -17,14 +17,18 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
+
+
   const fetchProjects = async () => {
-    try {
-      const data = await getProjects();
-      setProjects(Array.isArray(data) ? data : data?.data || []);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const data = await getProjects();
+    setProjects(Array.isArray(data) ? data : []);
+  } catch (error) {
+    console.log(error);
+    setProjects([]);
+  }
+};
+
   const handleAdd = async (event) => {
     event.preventDefault();
 
