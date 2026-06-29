@@ -8,6 +8,8 @@ import Goals from "./pages/Goals/Goals";
 import Sessions from "./pages/Sessions/Sessions";
 
 function Layout({ children }) {
+
+  console.log("API URL:", import.meta.env.VITE_API_URL);
   return (
     <div className="layout">
       <Navbar />
