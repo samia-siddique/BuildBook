@@ -1,0 +1,97 @@
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.goal-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.25s;
+}
+
+.goal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.goal-card h3 {
+  font-size: 18px;
+  color: #333;
+  transition: 0.25s;
+}
+
+.completed-goal {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.goal-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: 2px solid #6c63ff;
+  display: block;
+  cursor: pointer;
+  transition: 0.25s;
+  background-color: #c8c6f8;
+}
+
+.checkbox input:checked + .checkmark {
+  background: #6c63ff;
+  position: relative;
+}
+
+.checkbox input:checked + .checkmark::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #cf2d2d;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #cf2d2d;
+  color: white;
+}
+
+.delete-btn .trash-bin {
+  size: 18;
+  background: #fee2e2;
+}
+
+.delete-btn:hover .trash-bin:hover {
+  background: #cf2d2d;
+}
+
+.delete-btn:hover {
+  background: #cf2d2d;
+  color: white;
+}

@@ -1,0 +1,54 @@
+.goal-top {
+  text-align: center;
+}
+
+.goal-top p {
+  color: #888;
+  font-size: 14px;
+}
+
+.goal-top h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.goal-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.goal-middle img {
+  width: 180px;
+}
+
+.goal-last {
+  text-align: center;
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .goal-preview {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 18px;
+  }
+
+  .goal-top p {
+    font-size: 12px;
+  }
+
+  .goal-top h2 {
+    font-size: 22px;
+  }
+
+  .goal-middle img {
+    width: 110px;
+    height: auto;
+  }
+
+  .goal-last {
+    font-size: 14px;
+  }
+}

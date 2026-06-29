@@ -1,0 +1,68 @@
+.session-top {
+  text-align: center;
+}
+
+.session-top p {
+  color: #8b8b8b;
+  font-size: 14px;
+}
+
+.session-top h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.session-middle {
+  margin: 20px 0;
+}
+
+.session-middle h3 {
+  color: #222;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.session-middle p {
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.session-last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-last span {
+  color: #777;
+  font-size: 14px;
+}
+
+.session-last p {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .session-preview {
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .session-top h2 {
+    font-size: 22px;
+  }
+
+  .session-middle h3 {
+    font-size: 18px;
+  }
+
+  .session-middle p {
+    font-size: 14px;
+  }
+
+  .session-last {
+    font-size: 13px;
+  }
+}
